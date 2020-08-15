@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- <link rel= "stylesheet" type= "text/css" 
+    href= "{{ url_for('static',filename='stylesheet.css') }}"> -->
+</head>
+<style>
+    .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="header-logo">Wataru Nagasaka Portfolio</div>
+        <div class=""></div>
+        <div class="header-list clearfix">
+            <div class="header-list-content touch">
+                <i class="fas fa-desktop"></i>
+                TOP
+            </div>
+            <div class="header-list-content touch">
+                <i class="fas fa-user"></i>
+                PROFILE
+            </div>
+            <div class="header-list-content touch">
+                <i class="fas fa-globe-asia"></i>
+                WORKS
+            </div>
+            <div class="header-list-content touch">
+                <i class="fas fa-info"></i>
+                INFO
+            </div>
+        </div>
+    </div>
+
+    <div class="introduction">
+        <h2 class="introduction-profile">PROFILE</h2>
+        <div class="introduction-detail">
+            <p>はじめまして。長坂 亘(ながさか わたる)と申します。2020年4月よりプログラミングの学習を始めました。</p>
+            <p>主な使用言語は、Pythonで機械学習を学んでいます。今後は、Docker等も扱えるようになりたいと考えています。</p>
+        </div>
+        <div class="introduction-code">
+            <h2>使用するプログラミング言語一覧</h2>
+            <img src="../static/image/python.png">
+            <img src="../static/image/heroku.png">
+            <img src="../static/image/docker.png">
+            <img src="../static/image/github.png">
+            <img src="../static/image/mysql.png">
+            <img src="../static/image/html.png">
+            <img src="../static/image/css.png">
+            <img src="../static/image/jquery.png">
+        </div>
+    </div>
+    <div class="production">
+        <div class="production-title">WORKS</div>
+        <div class="production-kaggle clearfix">
+            <h3>Kaggleコンペ</h3>
+            <div class="production-kaggle-content">
+                <h4>タイタニック</h4>
+                <a href="https://www.kaggle.com/watarunagasaka/titanic-ver5"><img src="../static/image/titanic.png">
+                <a class="blog" href="">ブログ記事</a>
+            </div>
+            <div class="production-kaggle-content">
+                <h4>住宅価格</h4>
+                <a href="https://www.kaggle.com/watarunagasaka/house-price-gbdt"><img src="../static/image/house.png">
+                <a class="blog" href="https://qiita.com/ProgramWataru/items/c60b6da7852c46788e76">ブログ記事</a>
+            </div>
+            <div class="production-kaggle-content">
+                <h4>レンタルバイク</h4>
+                <a href="https://www.kaggle.com/watarunagasaka/bike-sharing-ja"><img src="../static/image/bike.png">
+                <a class="blog" href="">ブログ記事</a>
+            </div>
+            <div class="production-kaggle-content">
+                <h4>開催中のコンペに参加</h4>
+                <a href=""><img src="../static/image/gray.jpeg">
+        
+                <a class="blog" href="">ブログ記事</a>
+            </div>                   
+
+        </div>
+        <div class="production-picture clearfix">
+            <h3>画像診断アプリ</h3>
+            <div class="production-picture-content">
+                <h4>女子プロゴルファー判定</h4>
+                <a href="https://girl-golf.herokuapp.com/"><img src="../static/image/golfer.png">
+                <p>説明：父親が女子ゴルファーが好きなのだが私は顔の判別が難しかったため、判別できるアプリを作成。将来的にはプロゴルファー全員判別できるようなアプリケーションにする。</p>
+                <a href="">ブログ記事①</a>
+                <a href="">ブログ記事②</a>
+                <a href="">ブログ記事③</a>
+            </div>
+            <div class="production-picture-content">
+                <h4>手書き文字</h4>
+                <a href="https://aimnistdemy.herokuapp.com/"><img src="../static/image/number.png">
+                    <p>説明：画像診断アプリの作成方法の練習。モデルを作成＋アプリ作成＋herokuにてデプロイの一連の流れをこのアプリ作成で習得。</p>
+                    <a href="">ブログ記事</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="qualification">
+        <h2>資格一覧</h2>
+        <div class="qualification-list">
+            <ul>
+                <li>G検定 (11月取得計画)</li>
+                <li>統計検定２級 (9月中取得計画)</li>
+                <li>Python 3 エンジニア認定データ分析試験 (取得済)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="contact">
+        <h2>INFO</h2>
+        <div class="contact-list email">
+            <img src="../static/image/mail.png">
+            <p>E-mail:   </p>
+            <a href="mailto:w.nagasaka1024@outlook.com">
+                w.nagasaka1024@outlook.com</a>
+        </div>
+
+        <div class="contact-list twitter">
+            <img src="../static/image/twitter.png">
+            <p>Twitter</p>
+        </div>
+
+        <div class="contact-list github">
+            <img src="../static/image/github.png">
+            <p>Github</p>
+        </div>
+    </div>
+
+</body>
+</html>
