@@ -134,6 +134,7 @@ button {
 
 body {
     font-family: "Avenir Next";
+    min-height: 100%;
   }
 
 .header {
@@ -322,7 +323,7 @@ body {
 }
 
 .contact {
-  height: 200px;
+  height: 100%;
   background-color: #2f5167;
   color: #fff;
   padding: 5px 300px;
@@ -347,4 +348,9 @@ body {
 
 .contact img {
   height: 30px;
+}
+
+.fab {
+  font-size: 20px;
+  margin-right: 8px;
 }
