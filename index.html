@@ -4,13 +4,10 @@
     <meta charset="utf-8">
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesheet.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <!-- <link rel= "stylesheet" type= "text/css" 
-    href= "{{ url_for('static',filename='stylesheet.css') }}"> -->
+    <script src="./script.js"></script>
 </head>
 <style>
     .clearfix::after {
@@ -20,122 +17,267 @@
     }
 </style>
 <body>
-    <div class="header">
-        <div class="header-logo">Wataru Nagasaka Portfolio</div>
-        <div class=""></div>
-        <div class="header-list clearfix">
-            <div class="header-list-content touch">
-                <i class="fas fa-desktop"></i>
-                TOP
+    <div id="wrapper">
+        <div class="header">
+            <div class="header-logo">Wataru Nagasaka Portfolio</div>
+            <div class=""></div>
+            <div class="header-list clearfix">
+                <div id="top-button" class="header-list-content touch">
+                    <i class="fas fa-desktop"></i>
+                    TOP
+                </div>
+                <div id="profile-button" class="header-list-content touch">
+                    <i class="fas fa-user"></i>
+                    PROFILE
+                </div>
+                <div id="works-button" class="header-list-content touch">
+                    <i class="fas fa-globe-asia"></i>
+                    WORKS
+                </div>
+                <div id="info-button" class="header-list-content touch">
+                    <i class="fas fa-info"></i>
+                    INFO
+                </div>
             </div>
-            <div class="header-list-content touch">
-                <i class="fas fa-user"></i>
-                PROFILE
+        </div>
+    
+        <div class="introduction">
+            <h2 class="introduction-profile">PROFILE</h2>
+            <div class="introduction-detail">
+                <p>はじめまして。長坂 亘(ながさか わたる)と申します。2020年4月よりプログラミングの学習を始めました。</p>
+                <p>主な使用言語は、Pythonで機械学習を学んでいます。今後は、Docker等も扱えるようになりたいと考えています。</p>
             </div>
-            <div class="header-list-content touch">
-                <i class="fas fa-globe-asia"></i>
-                WORKS
+            <div class="introduction-code">
+                <h2 id="top-button">使用するプログラミング言語一覧</h2>
+                <img src="static/image/python.png">
+                <img src="static/image/heroku.png">
+                <img src="static/image/docker.png">
+                <img src="static/image/github.png">
+                <img src="static/image/mysql.png">
+                <img src="static/image/html.png">
+                <img src="static/image/css.png">
+                <img src="static/image/jquery.png">
             </div>
-            <div class="header-list-content touch">
-                <i class="fas fa-info"></i>
-                INFO
+        </div>
+        <div class="production">
+            <div class="production-title">WORKS</div>
+            <div class="production-kaggle clearfix">
+                <h3>Kaggleコンペ</h3>
+                <div id="titanic" class="production-kaggle-content">
+                    <h4>タイタニック</h4>
+                    <img src="static/image/titanic.png">
+                </div>
+                <div id="house-pricing" class="production-kaggle-content">
+                    <h4>住宅価格</h4>
+                    <img src="static/image/house.png">
+                </div>
+                <div id = "bike-sharing" class="production-kaggle-content">
+                    <h4>レンタルバイク</h4>
+                    <img src="static/image/bike.png">
+                </div>
+                <div id="data-knock" class="production-kaggle-content">
+                    <h4>１００本ノック</h4>
+                    <img src="static/image/gray.jpeg">
+                </div>                   
+    
+            </div>
+            <div class="production-picture clearfix">
+                <h3>画像診断アプリ</h3>
+                <div id="girl-golfer" class="production-picture-content">
+                    <h4>女子プロゴルファー判定</h4>
+                    <img src="static/image/golfer.png">
+                </div>
+                <div id="number-identification" class="production-picture-content">
+                    <h4>手書き文字</h4>
+                    <img src="static/image/number.png">
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="production-detail titanic">
+            <div class="production-detail-title">
+                タイタニック
+            </div>
+            <div class="production-detail-content">
+                <div class="production-detail-content-url">
+                    <div class="production-detail-content-url-title">URL</div>
+                    <a href="https://www.kaggle.com/watarunagasaka/titanic-ver5">https://www.kaggle.com/watarunagasaka/titanic-ver5</a>
+                </div>
+                <div class="production-detail-content-reason clearfix">
+                    <div class="production-detail-content-reason-title">取り組み理由</div>
+                    <div class="production-detail-content-reason-text">kaggleを始めるにあたり、タイタニックは、チュートリアルや解法が充実していると考えた。データ前処理からのモデル構築の習得を身に付けるために取り組んだ。</div>
+                </div>
+                <div class="production-detail-content-description clearfix">
+                    <div class="production-detail-content-description-title">説明</div>
+                    <div class="production-detail-content-description-text">データ前処理でグラフ化（視覚化）してデータを俯瞰してみる重要性を理解できた。カテゴリ値を数値データに変換、欠損値の処理も学ぶ。モデルの構築もグリッドサーチ、ランダムサーチを体験する。３週繰り返したとでデータ前処理のメソッドやモデル構築方法を理解できた。</div>
+                </div>
+                <div class="production-detail-content-blog clearfix">
+                    <div class="production-detail-content-blog-title">ブログ</div>
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="production-detail house-pricing">
+            <div class="production-detail-title">
+                住宅価格
+            </div>
+            <div class="production-detail-content">
+                <div class="production-detail-content-url">
+                    <div class="production-detail-content-url-title">URL</div>
+                    <a href="https://www.kaggle.com/watarunagasaka/house-price-gbdt">https://www.kaggle.com/watarunagasaka/house-price-gbdt</a>
+                </div>
+                <div class="production-detail-content-reason clearfix">
+                    <div class="production-detail-content-reason-title">取り組み理由</div>
+                    <div class="production-detail-content-reason-text">タイタニックで分類について学んだため、住宅価格について回帰を学ぶために取り組んだ。</div>
+                </div>
+                <div class="production-detail-content-description clearfix">
+                    <div class="production-detail-content-description-title">説明</div>
+                    <div class="production-detail-content-description-text">住宅価格を予測する。説明変数が多かったため面食らう。不明な説明変数はデータ前処理でかなり削りモデルを構築したがRMSE(二乗平均平方根誤差)が大きくなってしまった。そのためデータの型を数値変換したりと試行錯誤した。モデルはGBDT(勾配ブースティング木)をトライ。イメージはたくさんの専門家による意思決定で物凄い手法であると分かった。</div>
+                </div>
+                <div class="production-detail-content-blog clearfix">
+                    <div class="production-detail-content-blog-title">ブログ</div>
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="production-detail bike-sharing">
+            <div class="production-detail-title">
+                レンタルバイク
+            </div>
+            <div class="production-detail-content">
+                <div class="production-detail-content-url">
+                    <div class="production-detail-content-url-title">URL</div>
+                    <a href="https://www.kaggle.com/watarunagasaka/bike-sharing-ja">https://www.kaggle.com/watarunagasaka/house-price-gbdt</a>
+                </div>
+                <div class="production-detail-content-reason clearfix">
+                    <div class="production-detail-content-reason-title">取り組み理由</div>
+                    <div class="production-detail-content-reason-text">時系列データを扱っていたので時系列解析を身に付けるため</div>
+                </div>
+                <div class="production-detail-content-description clearfix">
+                    <div class="production-detail-content-description-title">説明</div>
+                    <div class="production-detail-content-description-text">レンタルバイクの需要予測。データ前処理ではseabornを使いグラフを見やすくした。時系列データを年-月-日と分割し、相関関係を見た。対数平均二乗誤差（RMSLE)を行うのにモデルから予測した値を０にするなど無理やり感があったのでスコアはあまり良くない</div>
+                </div>
+                <div class="production-detail-content-blog clearfix">
+                    <div class="production-detail-content-blog-title">ブログ</div>
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="production-detail girl-golfer">
+            <div class="production-detail-title">
+                女子プロゴルファー判定
+            </div>
+            <div class="production-detail-content">
+                <div class="production-detail-content-url">
+                    <div class="production-detail-content-url-title">URL</div>
+                    <a href="https://girl-golf.herokuapp.com/">https://girl-golf.herokuapp.com/</a>
+                </div>
+                <div class="production-detail-content-reason clearfix">
+                    <div class="production-detail-content-reason-title">取り組み理由</div>
+                    <div class="production-detail-content-reason-text">父親が女子プロゴルファーが好きだが家族は顔を見ても名前がわからないため、顔判別できるアプリを作成した</div>
+                </div>
+                <div class="production-detail-content-description clearfix">
+                    <div class="production-detail-content-description-title">説明</div>
+                    <div class="production-detail-content-description-text">渋野選手、原選手、小祝選手の３名の顔判断ができるアプリケーションとなっている。顔部分の取得はface_recgnitionの技術を使っている。データ集め、そしてデータ前処理（ほとんどが画像が使えるか使えないかを１枚ずつ確認するのに時間を費やした）。モデルの作成は転移学習（VGG16）を用いた。自分の作ったモデルの精度より遥かに高い精度が出た</div>
+                </div>
+                <div class="production-detail-content-blog clearfix">
+                    <div class="production-detail-content-blog-title">ブログ</div>
+                    <div class="production-detail-content-blog-box">
+                        <a class="blog" href="https://qiita.com/ProgramWataru/items/37939189126db164a41b">ブログ記事①</a>
+                        <a class="blog" href="https://qiita.com/ProgramWataru/items/58fe9370097107cc4150">ブログ記事②</a>
+                        <a class="blog" href="https://qiita.com/ProgramWataru/items/87ccf81febfd6c9d5025">ブログ記事③</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="production-detail number-identification">
+            <div class="production-detail-title">
+                手書き文字
+            </div>
+            <div class="production-detail-content">
+                <div class="production-detail-content-url">
+                    <div class="production-detail-content-url-title">URL</div>
+                    <a href="https://aimnistdemy.herokuapp.com/">https://aimnistdemy.herokuapp.com/</a>
+                </div>
+                <div class="production-detail-content-reason clearfix">
+                    <div class="production-detail-content-reason-title">取り組み理由</div>
+                    <div class="production-detail-content-reason-text">アプリケーション作成の練習とherokuへのデプロイ</div>
+                </div>
+                <div class="production-detail-content-description clearfix">
+                    <div class="production-detail-content-description-title">説明</div>
+                    <div class="production-detail-content-description-text">手書き文字0~9の画像を判断する。Flaskを用いてアプリを作成。herokuへのデプロイやgitの使用方法についてもアプリ作成課程を通して学んだ</div>
+                </div>
+                <div class="production-detail-content-blog clearfix">
+                    <div class="production-detail-content-blog-title">ブログ</div>
+                    <div class="production-detail-content-blog-box">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="production-detail data-knock">
+            <div class="production-detail-title">
+                データサイエンス100本ノック
+            </div>
+            <div class="production-detail-content">
+                <div class="production-detail-content-url">
+                    <div class="production-detail-content-url-title">URL</div>
+                    <a href=""></a>
+                </div>
+                <div class="production-detail-content-reason clearfix">
+                    <div class="production-detail-content-reason-title">取り組み理由</div>
+                    <div class="production-detail-content-reason-text">データ加工等の前処理方法を学ぶため</div>
+                </div>
+                <div class="production-detail-content-description clearfix">
+                    <div class="production-detail-content-description-title">説明</div>
+                    <div class="production-detail-content-description-text">データサイエンティスト教会から無料で出されている。kaggleを通してデータ前処理の重要性を感じたため取り組んでいる。解答の解説をQiitaの記事にアップしている。</div>
+                </div>
+                <div class="production-detail-content-blog clearfix">
+                    <div class="production-detail-content-blog-title">ブログ</div>
+                    <div class="production-detail-content-blog-box">
+                        <a href="https://qiita.com/ProgramWataru/items/42ff579a3cdb4f0ad158">データサイエンス100本ノック解説(P001~020)</a>
+                        <a href="https://qiita.com/ProgramWataru/items/0d3a2235eabdc09f3891">データサイエンス100本ノック解説(P021~040)</a>
+                        <a href="https://qiita.com/ProgramWataru/items/4d0a1e9bebac86f52192">データサイエンス100本ノック解説(P041~060)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="qualification clearfix">
+            <h2>資格一覧</h2>
+            <div class="qualification-list">
+                <ul>
+                    <li>G検定 (11月取得計画)</li>
+                    <li>統計検定２級 (9月中取得計画)</li>
+                    <li>Python 3 エンジニア認定データ分析試験 (9月中取得計画)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact">
+            <h2>INFO</h2>
+            <div class="contact-list email">
+                <img src="static/image/mail.png">
+                <p>E-mail:   </p>
+                <a href="mailto:w.nagasaka1024@outlook.com">
+                    w.nagasaka1024@outlook.com</a>
+            </div>
+    
+            <div class="contact-list twitter">
+                <i class="fab fa-twitter"></i>
+                <a href="https://twitter.com/ProgramWataru">Twitter</a>
+            </div>
+    
+            <div class="contact-list github">
+                <a href="https://github.com/nagasaka2410"><img src="static/image/github.png">
+                <p>Github</p>
             </div>
         </div>
     </div>
-
-    <div class="introduction">
-        <h2 class="introduction-profile">PROFILE</h2>
-        <div class="introduction-detail">
-            <p>はじめまして。長坂 亘(ながさか わたる)と申します。2020年4月よりプログラミングの学習を始めました。</p>
-            <p>主な使用言語は、Pythonで機械学習を学んでいます。今後は、Docker等も扱えるようになりたいと考えています。</p>
-        </div>
-        <div class="introduction-code">
-            <h2>使用するプログラミング言語一覧</h2>
-            <img src="static/image/python.png">
-            <img src="static/image/heroku.png">
-            <img src="static/image/docker.png">
-            <img src="static/image/github.png">
-            <img src="static/image/mysql.png">
-            <img src="static/image/html.png">
-            <img src="static/image/css.png">
-            <img src="static/image/jquery.png">
-        </div>
-    </div>
-    <div class="production">
-        <div class="production-title">WORKS</div>
-        <div class="production-kaggle clearfix">
-            <h3>Kaggleコンペ</h3>
-            <div class="production-kaggle-content">
-                <h4>タイタニック</h4>
-                <a href="https://www.kaggle.com/watarunagasaka/titanic-ver5"><img src="static/image/titanic.png">
-                <a class="blog" href="">ブログ記事</a>
-            </div>
-            <div class="production-kaggle-content">
-                <h4>住宅価格</h4>
-                <a href="https://www.kaggle.com/watarunagasaka/house-price-gbdt"><img src="static/image/house.png">
-                <a class="blog" href="https://qiita.com/ProgramWataru/items/c60b6da7852c46788e76">ブログ記事</a>
-            </div>
-            <div class="production-kaggle-content">
-                <h4>レンタルバイク</h4>
-                <a href="https://www.kaggle.com/watarunagasaka/bike-sharing-ja"><img src="static/image/bike.png">
-                <a class="blog" href="">ブログ記事</a>
-            </div>
-            <div class="production-kaggle-content">
-                <h4>開催中のコンペに参加</h4>
-                <a href=""><img src="static/image/gray.jpeg">
-        
-                <a class="blog" href="">ブログ記事</a>
-            </div>                   
-
-        </div>
-        <div class="production-picture clearfix">
-            <h3>画像診断アプリ</h3>
-            <div class="production-picture-content">
-                <h4>女子プロゴルファー判定</h4>
-                <a href="https://girl-golf.herokuapp.com/"><img src="static/image/golfer.png">
-                <p>説明：父親が女子ゴルファーが好きなのだが私は顔の判別が難しかったため、判別できるアプリを作成。将来的にはプロゴルファー全員判別できるようなアプリケーションにする。</p>
-                <a class="blog" href="https://qiita.com/ProgramWataru/items/37939189126db164a41b">ブログ記事①</a>
-                <a class="blog" href="https://qiita.com/ProgramWataru/items/58fe9370097107cc4150">ブログ記事②</a>
-                <a class="blog" href="https://qiita.com/ProgramWataru/items/87ccf81febfd6c9d5025">ブログ記事③</a>
-            </div>
-            <div class="production-picture-content">
-                <h4>手書き文字</h4>
-                <a href="https://aimnistdemy.herokuapp.com/"><img src="static/image/number.png">
-                    <p>説明：画像診断アプリの作成方法の練習。モデルを作成＋アプリ作成＋herokuにてデプロイの一連の流れをこのアプリ作成で習得。</p>
-                    <a href="#">ブログ記事</a>
-            </div>
-
-        </div>
-    </div>
-    <div class="qualification">
-        <h2>資格一覧</h2>
-        <div class="qualification-list">
-            <ul>
-                <li>G検定 (11月取得計画)</li>
-                <li>統計検定２級 (9月中取得計画)</li>
-                <li>Python 3 エンジニア認定データ分析試験 (取得済)</li>
-            </ul>
-        </div>
-    </div>
-    <div class="contact">
-        <h2>INFO</h2>
-        <div class="contact-list email">
-            <img src="static/image/mail.png">
-            <p>E-mail:   </p>
-            <a href="mailto:w.nagasaka1024@outlook.com">
-                w.nagasaka1024@outlook.com</a>
-        </div>
-
-        <div class="contact-list twitter">
-            <i class="fab fa-twitter"></i>
-            <a href="https://twitter.com/ProgramWataru">Twitter</a>
-        </div>
-
-        <div class="contact-list github">
-            <a href="https://github.com/nagasaka2410"><img src="static/image/github.png">
-            <p>Github</p>
-        </div>
-    </div>
-
 </body>
 </html>
