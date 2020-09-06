@@ -166,6 +166,7 @@ body {
 .header-list {
   margin: 50px auto;
   min-width: 700px;
+  width: 900px;
   padding: 20px;
   text-align: center;
   font-weight: bold;
@@ -185,6 +186,7 @@ body {
 .touch:hover {
   opacity: 1;
   color: #000;
+  cursor: pointer;
 }
 
 .introduction {
@@ -226,7 +228,7 @@ body {
 
 .introduction-code img {
   height: 100px;
-  margin: 10px;
+  margin: 10px 15px;
 }
 
 .production {
